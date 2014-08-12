@@ -66,6 +66,10 @@
                 <value>model/TFuncIntroductionModel.hbm.xml</value>
                 <value>model/TSliderImgModel.hbm.xml</value>
                 <value>model/TTrialRequestModel.hbm.xml</value>
+                <value>model/TTrialRequestDto.hbm.xml</value>
+                <value>model/SysAddressModel.hbm.xml</value>
+                <value>model/TNewsDto.hbm.xml</value>
+                <value>model/TUsersModel.hbm.xml</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -93,6 +97,10 @@
                 <value>model.TFuncIntroductionModel</value>
                 <value>model.TSliderImgModel</value>
                 <value>model.TTrialRequestModel</value>
+                <value>model.TTrialRequestDto</value>
+                <value>model.SysAddressModel</value>
+                <value>model.TNewsDto</value>
+                <value>model.TUsersModel</value>
             </list>
         </property>
 

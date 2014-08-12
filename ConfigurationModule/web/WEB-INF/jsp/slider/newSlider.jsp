@@ -70,10 +70,10 @@
             <input style="display: none;" id="imgUrl"  name="imgUrl" >
             <input id="chooseImgFile" name="chooseImgFile" type="file"style="display: none;" onchange='PreviewImage("ImgPreview",this,"350","90%")' />
             <input type="button" class="btn" onclick="chooseImgFile.click()" value="选择图片">
-            <div id="ImgPreview" style='max-width:350px; margin-bottom:20px;'>
-                <img src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"  style='width:350px; '/>
-            </div>
-            <input type="button" class="btn" onclick="upLoadImg('ImgPreview','chooseImgFile','imgUrl','350','200')" value="上传图片"/>
+        <div id="ImgPreview" style='max-width:350px; margin-bottom:20px;'>
+        <img src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"  style='width:350px; '/>
+    </div>
+        <input type="button" class="btn" onclick="upLoadImg('ImgPreview','chooseImgFile','imgUrl','350','200')" value="上传图片"/>
         </p>
 
         <p><label>轮播图介绍</label><textarea id="imgDesc"  name="imgDesc" class="textComment"></textarea></p>

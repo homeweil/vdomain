@@ -51,7 +51,6 @@
 <body class="body">
 <p><label class="titlelabel">试用申请管理</label></p>
 <div style="position: fixed; text-align:right;margin-top: 10px;">
-    <button class="btn" >导出Excel</button>&nbsp;&nbsp;
     <button class="btn" onclick="CheckOnMouseDown()">确认申请</button>&nbsp;&nbsp;
     <button class="btn" onclick="delOnMouseDown()">清除记录</button>&nbsp;&nbsp;
 </div>
@@ -63,8 +62,8 @@
             <th width="101px">申请者</th>
             <th width="101px">联系电话</th>
             <th width="171px">E-Mail</th>
-            <th width="151px">申请时间</th>
-            <th width="151px">审核</th>
+            <th width="155px">申请时间</th>
+            <th width="155px">审核</th>
         </tr>
         <td colspan="7">
             <div class="scrollTable">
@@ -78,8 +77,8 @@
                             <td width="100">${trial.phoneNum}</td>
                             <td style="text-align:center;" width="170px">${trial.eMail}</td>
                             <td width="150px">${trial.tTime}</td>
-                            <th width="150px"><span <c:if test="${cooperation.tcheck =='YES'}">style="color:green;"</c:if>
-                                                    <c:if test="${cooperation.tcheck =='NOT'}">style="color:red;"</c:if>>${trial.tCheck}</span></th>
+                            <td width="150px"><span <c:if test="${trial.tCheck =='YES'}">style="color:green;"</c:if>
+                                                    <c:if test="${trial.tCheck =='NOT'}">style="color:red;"</c:if>>${trial.tCheck}</span></td>
                         </tr>
                     </c:forEach>
                 </table>

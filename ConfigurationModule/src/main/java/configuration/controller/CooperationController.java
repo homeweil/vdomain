@@ -1,5 +1,4 @@
 package configuration.controller;
-
 import configuration.service.CTCooperationService;
 import model.TRequestCooperationModel;
 import org.springframework.stereotype.Controller;

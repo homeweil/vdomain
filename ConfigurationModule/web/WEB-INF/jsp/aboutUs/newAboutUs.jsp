@@ -53,12 +53,12 @@
         <p>
             <label>版面图片</label>
             <input style="display: none;" id="imgUrl"  name="imgUrl" >
-            <input id="chooseImgFile" name="chooseImgFile" type="file"style="display: none;" onchange='PreviewImage("ImgPreview",this,"350","200")' />
+            <input id="chooseImgFile" name="chooseImgFile" type="file"style="display: none;" onchange='PreviewImage("ImgPreview",this,"350","100%")' />
             <input type="button" class="btn" onclick="chooseImgFile.click()" value="选择图片">
-        <div id="ImgPreview" style='max-width:350px; max-height:200px;margin-bottom:20px;'>
-            <img src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"  style='width:350px; height:200px;'/>
+        <div id="ImgPreview" style='max-width:350px; margin-bottom:20px;'>
+            <img src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"  style='width:350px; '/>
         </div>
-        <input type="button" class="btn" onclick="upLoadImg('ImgPreview','chooseImgFile','imgUrl','350','200')" value="上传图片"/>
+        <input type="button" class="btn" onclick="upLoadImg('ImgPreview','chooseImgFile','imgUrl','350','100%')" value="上传图片"/>
         </p>
         <p>
             <label>简要描述</label>

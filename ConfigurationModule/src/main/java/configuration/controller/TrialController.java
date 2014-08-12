@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.List;
-
 /**
  * Created by Administrator on 2014/8/5 0005.
  */
@@ -28,7 +27,7 @@ public class TrialController {
         model.addAttribute("trialList",tTrialList);
     }
 
-    @RequestMapping(value="trial/updateTrialDo")
+    @RequestMapping(value="/trial/updateTrialDo")
     public String updateTrialDo(String id,HttpSession session,Model model){
         TTrialRequestModel tTrial =null;
         try{

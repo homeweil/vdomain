@@ -58,17 +58,17 @@
         <p>
             <label>介绍图片</label>
             <input style="display: none;"id="funcPicUrl"  name="funcPicUrl" value="${tFunc.funcPicUrl}" >
-            <input id="chooseIntroductionFile" name="chooseIntroductionFile" type="file"style="display: none;" onchange='PreviewImage("introductionImgPreview",this,"350","200")' />
+            <input id="chooseIntroductionFile" name="chooseIntroductionFile" type="file"style="display: none;" onchange='PreviewImage("introductionImgPreview",this,"350","100%")' />
             <input type="button" class="btn" onclick="chooseIntroductionFile.click()" value="选择图片">
-            <div id="introductionImgPreview" style='max-width:350px; max-height:200px;margin-bottom:20px;'>
+            <div id="introductionImgPreview" style='max-width:350px;margin-bottom:20px;'>
             <img
                     <c:choose>
                         <c:when test="${tFunc.funcPicUrl==null}">src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"</c:when>
                         <c:otherwise>src="${pageContext.request.contextPath}${tFunc.funcPicUrl}"</c:otherwise>
                     </c:choose>
-                    style='width:350px; height:200px;'/>
+                    style='width:350px; '/>
             </div>
-        <input type="button" class="btn" onclick="upLoadImg('introductionImgPreview','chooseIntroductionFile','funcPicUrl','350','200')" value="上传图片"/>
+        <input type="button" class="btn" onclick="upLoadImg('introductionImgPreview','chooseIntroductionFile','funcPicUrl','350','100%')" value="上传图片"/>
         </p>
 
         <p>

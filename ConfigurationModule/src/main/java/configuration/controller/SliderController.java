@@ -26,7 +26,7 @@ public class SliderController {
             tSliderList = tsliderImgService.getSliderList();
         }catch (Exception ex)
         {
-            model.addAttribute("ERROR",ex);
+            ex.printStackTrace();
         }
         model.addAttribute("tSliderList",tSliderList);
     }
@@ -52,7 +52,6 @@ public class SliderController {
             tsliderImgService.saveSlider(slider);
         }catch(Exception ex)
         {
-            model.addAttribute("ERROR",ex);
             ex.printStackTrace();
             return "/slider/sliderFailure";//操作失败页面
         }

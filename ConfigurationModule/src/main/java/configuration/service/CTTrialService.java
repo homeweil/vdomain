@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Administrator on 2014/8/5 0005.
  */
 @Service("configTTrialService")
-public class CTTrialService {
+public class  CTTrialService {
     @Resource(name="configTTrialDao")
     CTTrialDao tTrialDao;
 

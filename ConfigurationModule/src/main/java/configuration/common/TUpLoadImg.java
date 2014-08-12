@@ -26,7 +26,7 @@ public class TUpLoadImg {
 
     private static final int MAX_UPLOAD_SIZE = 10 * 1024 * 1024;
     private static final String SAVE_PATH = "Image";
-    private static final String uploadPath="/vdomainConfig";
+    private static final String uploadPath="/resources";
 
     @RequestMapping(value="/common/upLoadImg")
     public Model fileUpload(HttpServletRequest request, HttpServletResponse response, Model model){
@@ -59,7 +59,7 @@ public class TUpLoadImg {
             String fileName = getSaveFileName(originalName);
             String savePath = SAVE_PATH + "/";
             String realPath = getFolder(request, savePath);
-             returnPath = uploadPath + "/" + SAVE_PATH +"/" + fileName;
+            returnPath = uploadPath + "/" + SAVE_PATH +"/" + fileName;
             fileUrl =  realPath +"\\" + fileName;
             System.out.println("Return Url:"+returnPath);
             fileItem.write(new File(fileUrl));
@@ -76,7 +76,7 @@ public class TUpLoadImg {
             e.printStackTrace();
         }
         return null;
-   }
+    }
 
 
 

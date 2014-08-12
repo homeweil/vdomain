@@ -55,7 +55,7 @@
 
 <body>
 <form id="sliderForm"  action="${pageContext.request.contextPath}/slider/updateSliderDo.cfg" method="post" >
-<p><label class="titlelabel">修改轮播图</label></p>
+    <p><label class="titlelabel">修改轮播图</label></p>
     <div style="margin:20px auto;margin-left:30px;">
         <p><label>轮播图类型 ID:${param.sliderId}</label></p>
         <input type="hidden" id="id" name="id" value="${param.sliderId}"/>
@@ -65,32 +65,32 @@
         <input name="sliderType" type="radio" value="案例轮播图"     <c:if test="${tSlider.sliderFlag =='案例轮播图'}">checked="true"</c:if>/>案例轮播图 &nbsp;&nbsp;
         <input name="sliderType" type="radio" value="合作伙伴轮播图" <c:if test="${tSlider.sliderFlag =='合作伙伴轮播图'}">checked="true"</c:if>/>合作伙伴轮播 &nbsp;&nbsp;
     </div>
-    </p>
+        </p>
 
-    <p>
-        <label>轮播图指向链接</label>
-        <input id="targetUrl" name="targetUrl" type="text" style="width:250px;" value="${tSlider.targetUrl}">
-    </p>
-    <p>
-        <label>选择图片</label>
-        <input style="display: none;" id="imgUrl"  name="imgUrl" value="${tSlider.imgUrl}">
-        <input id="chooseImgFile" name="chooseImgFile" type="file"style="display: none;" onchange='PreviewImage("ImgPreview",this,"350","100%")' />
-        <input type="button" class="btn" onclick="chooseImgFile.click()" value="选择图片">
+        <p>
+            <label>轮播图指向链接</label>
+            <input id="targetUrl" name="targetUrl" type="text" style="width:250px;" value="${tSlider.targetUrl}">
+        </p>
+        <p>
+            <label>选择图片</label>
+            <input style="display: none;" id="imgUrl"  name="imgUrl" value="${tSlider.imgUrl}">
+            <input id="chooseImgFile" name="chooseImgFile" type="file"style="display: none;" onchange='PreviewImage("ImgPreview",this,"350","100%")' />
+            <input type="button" class="btn" onclick="chooseImgFile.click()" value="选择图片">
         <div id="ImgPreview" style='max-width:350px;margin-bottom:20px;'>
-            <img
-                  <c:choose>
-                  <c:when test="${tSlider.imgUrl==null}">src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"</c:when>
-                  <c:otherwise>src="${pageContext.request.contextPath}${tSlider.imgUrl}"</c:otherwise>
-                  </c:choose>
-                  style='width:350px;'/>
-        </div>
+        <img
+                <c:choose>
+                    <c:when test="${tSlider.imgUrl==null}">src="${pageContext.request.contextPath}/resources/images/PreviewBig.jpg"</c:when>
+                    <c:otherwise>src="${pageContext.request.contextPath}${tSlider.imgUrl}"</c:otherwise>
+                </c:choose>
+                style='width:350px;'/>
+    </div>
         <input type="button" class="btn" onclick="upLoadImg('ImgPreview','chooseImgFile','imgUrl','350','100%')" value="上传图片"/>
-    </p>
-    <p><label>轮播图介绍</label><textarea id="imgDesc"  name="imgDesc" class="textComment">${tSlider.imgDesc}</textarea></p>
-    <p style="margin-left:65px;">
-        <button class="btn" type="button" onclick="doUpdate()">提交</button>
-        <button class="btn" type="button" onclick="back()">返回</button></p>
-</div>
+        </p>
+        <p><label>轮播图介绍</label><textarea id="imgDesc"  name="imgDesc" class="textComment">${tSlider.imgDesc}</textarea></p>
+        <p style="margin-left:65px;">
+            <button class="btn" type="button" onclick="doUpdate()">提交</button>
+            <button class="btn" type="button" onclick="back()">返回</button></p>
+    </div>
 </form>
 </body>
 <script language="JavaScript">

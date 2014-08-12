@@ -1,5 +1,4 @@
 package configuration.controller;
-
 import configuration.service.CTFuncintroductionService;
 import model.TFuncIntroductionModel;
 import org.springframework.stereotype.Controller;

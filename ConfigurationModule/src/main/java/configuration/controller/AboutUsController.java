@@ -1,5 +1,4 @@
 package configuration.controller;
-
 import configuration.service.CTAboutUsService;
 import model.TAboutUsModel;
 import org.springframework.stereotype.Controller;
@@ -36,10 +35,10 @@ public class AboutUsController {
 
     @RequestMapping(value="/aboutUs/newAboutUsDo")
     public String newAboutUsDo(   String title,
-                                String imgUrl,
-                                String aboutDesc,
-                                HttpSession session,
-                                Model model
+                                  String imgUrl,
+                                  String aboutDesc,
+                                  HttpSession session,
+                                  Model model
     ){
         TAboutUsModel aboutUs = new TAboutUsModel();
         aboutUs.setTitle(title);
@@ -56,17 +55,17 @@ public class AboutUsController {
         return "/aboutUs/aboutUsSuccess";
     }
 
-     @RequestMapping(value="/aboutUs/updateAboutUs")
+    @RequestMapping(value="/aboutUs/updateAboutUs")
     public void updateAboutUs( String id, HttpSession session, Model model){
-         TAboutUsModel aboutUs = null;
-         try{
-             aboutUs = tAboutUsService.queryOneAboutUs(id);
-         }catch(Exception ex){
-             ex.printStackTrace();
-         }
-         model.addAttribute("aboutUs",aboutUs);
+        TAboutUsModel aboutUs = null;
+        try{
+            aboutUs = tAboutUsService.queryOneAboutUs(id);
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        model.addAttribute("aboutUs",aboutUs);
 
-     }
+    }
 
     @RequestMapping(value="/aboutUs/updateAboutUsDo")
     public String updateAboutUsDo(   String id,

@@ -52,7 +52,6 @@
 <body class="body">
 <p><label class="titlelabel">加盟申请管理</label></p>
 <div style="position: fixed; text-align:right;margin-top: 10px;">
-    <button class="btn" >导出Excel</button>&nbsp;&nbsp;
     <button class="btn" onclick="CheckOnMouseDown()">确认审核</button>&nbsp;&nbsp;
     <button class="btn" onclick="delOnMouseDown()">清除记录</button>&nbsp;&nbsp;
 </div>
